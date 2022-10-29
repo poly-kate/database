@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence http://java.sun.com/xml/ns/persistence/persistence_2_0.xsd"
+             version="2.0">
+
+    <persistence-unit name="entityManager" transaction-type="RESOURCE_LOCAL">
+
+        <class>jpa.entity.Contact</class>
+        <class>jpa.entity.Event</class>
+        <class>jpa.entity.Student</class>
+        <class>jpa.entity.Group</class>
+
+<!-- МОИ НАСТРОЙКИ!!!!!!!!!!!!!!!!-->
+        <class>jpa.myentity.Group</class>
+        <class>jpa.myentity.Climber</class>
+        <class>jpa.myentity.Mountain</class>
+
+
+
+        <properties>
+            <!--строка подключения к бд-->
+            <property name="javax.persistence.jdbc.url" value="jdbc:postgresql://127.0.0.1/simple_baza"/>
+            <!--логин пользователя бд-->
+            <property name="javax.persistence.jdbc.user" value="root"/>
+            <!-- пароль пользователя бд-->
+            <property name="javax.persistence.jdbc.password" value="admin"/>
+            <!--используемый драйвер-->
+            <property name="javax.persistence.jdbc.driver" value="org.postgresql.Driver"/>
+
+
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hibernate.c3p0.min_size" value="5"/>
+            <property name="hibernate.c3p0.max_size" value="20"/>
+            <property name="hibernate.c3p0.timeout" value="300"/>
+            <property name="hibernate.c3p0.max_statements" value="50"/>
+            <property name="hibernate.c3p0.idle_test_period" value="3000"/>
+            <!-- validate | update | create | create-drop -->
+            <property name="hibernate.hbm2ddl.auto" value="create-drop"/>
+            <!--загрузка sql скрипта-->
+            <!--            <property name="javax.persistence.sql-load-script-source" -->
+            <!--                      value="META-INF/path_to_sql.sql" />-->
+        </properties>
+    </persistence-unit>
+</persistence>
