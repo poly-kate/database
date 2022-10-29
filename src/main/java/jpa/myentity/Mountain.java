@@ -8,13 +8,13 @@ import javax.persistence.*;
 public class Mountain extends BaseIdentify{
 
     @Column(nullable = false)
-    private String name;//название
+    private String name;
 
     @Column(nullable = false)
-    private String country; //страна
+    private String country; 
 
     @Column(nullable = false)
-    private int height; //высота
+    private int height; 
 
     public Mountain(){
     }
