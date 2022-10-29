@@ -18,7 +18,6 @@ import java.util.List;
 public class MyApp {
     public static void main(String[] args) {
 
-        //Создаем альпинистов
         Climber masha = new Climber("Masha", "Saint-Petersburg", 22);
         Climber gleb = new Climber("Gleb", "Moscow", 40);
         Climber kirill = new Climber("Kirill", "Murmansk", 35);
@@ -26,18 +25,18 @@ public class MyApp {
         Climber dasha = new Climber("Dasha", "Sochi", 31);
         Climber olya = new Climber("Olya", "Anapa", 36);
 
-        //Создаем горы
+ 
         Mountain khibiny = new Mountain("khibiny", "Russia", 124);
         Mountain aneto = new Mountain("aneto", "Spain", 270);
         Mountain himalayas = new Mountain("himalayas", "China", 333);
 
-        //создаем группы
+        
         Group groupFirst = new Group(aneto, true, LocalDate.of(2021, Month.JANUARY,23), 20);
         Group groupSecond = new Group(himalayas, true, LocalDate.of(2021, Month.FEBRUARY,5), 12);
         Group groupThird = new Group(aneto, true, LocalDate.of(2021, Month.MAY,14), 5);
         Group groupFourth = new Group(khibiny, true, LocalDate.of(2021, Month.AUGUST,10), 15);
 
-        //Добавляем альпинистов в группы
+        
         groupFirst.addClimber(gleb);
         groupFirst.addClimber(anna);
         groupSecond.addClimber(dasha);
