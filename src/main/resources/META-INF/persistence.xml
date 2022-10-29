@@ -6,10 +6,7 @@
 
     <persistence-unit name="entityManager" transaction-type="RESOURCE_LOCAL">
 
-        <class>jpa.entity.Contact</class>
-        <class>jpa.entity.Event</class>
-        <class>jpa.entity.Student</class>
-        <class>jpa.entity.Group</class>
+ 
 
 <!-- МОИ НАСТРОЙКИ!!!!!!!!!!!!!!!!-->
         <class>jpa.myentity.Group</class>
