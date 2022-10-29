@@ -6,14 +6,9 @@
 
     <persistence-unit name="entityManager" transaction-type="RESOURCE_LOCAL">
 
- 
-
-<!-- МОИ НАСТРОЙКИ!!!!!!!!!!!!!!!!-->
         <class>jpa.myentity.Group</class>
         <class>jpa.myentity.Climber</class>
         <class>jpa.myentity.Mountain</class>
-
-
 
         <properties>
             <!--строка подключения к бд-->
